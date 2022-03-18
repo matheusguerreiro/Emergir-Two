@@ -1,0 +1,2 @@
+styles.min.css
+    sass --watch sass/styles.sass:css/styles.min.css --style compressed
