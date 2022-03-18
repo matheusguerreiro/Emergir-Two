@@ -1,0 +1,15 @@
+npm install -g sass
+
+create html file
+
+create sass dir
+    styles.sass
+
+create css dir
+    styles.css
+
+terminal in 10 dir
+    ex.
+        sass sass/styles.sass css/styles.css
+        or
+        sass --watch sass/styles.sass:css/styles.css
