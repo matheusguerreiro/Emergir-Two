@@ -1,0 +1,35 @@
+@import 'variables'
+
+h1
+    color: $text-color
+    border: $border
+
+p
+    color: $text-color
+    border: $border
+    font-size: $main-font
+    margin: #{$mx + 10px}
+
+a
+    color: $text-color
+    text-decoration: none
+    padding: #{$mx + $py}
+
+    &:visited
+        color: black
+    &:hover
+        text-decoration: underline
+        color: #a00
+    &:active
+        background: black
+        color: yellow
+
+div
+    p
+        // escopo local
+        $font-color: #729643
+        // shadowing
+        $border: 2px dotted blue
+        background-color: $font-color
+        color: white
+        border: $border

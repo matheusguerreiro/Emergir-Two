@@ -1,0 +1,36 @@
+h1 {
+  color: #00a;
+  border: 2px solid red;
+}
+
+p {
+  color: #00a;
+  border: 2px solid red;
+  font-size: 2rem;
+  margin: 12px;
+}
+
+a {
+  color: #00a;
+  text-decoration: none;
+  padding: 5px;
+}
+a:visited {
+  color: black;
+}
+a:hover {
+  text-decoration: underline;
+  color: #a00;
+}
+a:active {
+  background: black;
+  color: yellow;
+}
+
+div p {
+  background-color: #729643;
+  color: white;
+  border: 2px dotted blue;
+}
+
+/*# sourceMappingURL=styles.css.map */
