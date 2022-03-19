@@ -1,0 +1,22 @@
+@mixin special()
+    color: red
+    background-color: yellow
+    padding: 10px
+    border: 1px solid red
+
+    &:hover
+        color: blue
+        border-color: blue
+
+@mixin green()
+    color: green
+    border-color: green
+
+@mixin espacamento($p, $m)
+    padding: $p
+    margin: $m
+
+@mixin custom-border($s, $c, $w: 1px)
+    border: $w $s $c
+    
+    
