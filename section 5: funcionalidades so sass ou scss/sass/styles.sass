@@ -1,3 +1,5 @@
+@charset "utf-8"
+
 @import "variables"
 @import "button"
 @import "mixins"
@@ -43,3 +45,30 @@ h2
     font-size: 20px
     color: text-color(20)
     border: f-custom-border(3)
+
+.teste-1
+    width: custom-width()
+    background-color: aqua
+    // border: f-custom-border(4)
+.teste-2
+    width: custom-width($width: 500px)
+    background-color: #451
+.teste-3
+    width: custom-width($width: 900px, $division: 3)
+    background-color: #882
+
+
+$fonts: 40px, 60px, 100px
+@each $font in $fonts
+    .title-#{$font}
+        font-size: $font
+     
+@for $i from 1 through 3
+    .p-#{$i}
+        background-color: darkgray
+        @if $i == 1
+            color: lightblue
+        @else if $i == 2
+            color: lightgreen
+        @else if $i == 3
+            color: teal
