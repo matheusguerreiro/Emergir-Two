@@ -1,0 +1,51 @@
+Mixins Sass
+
+A diretiva @mixin permite criar código CSS que deve ser reutilizado em todo o site.
+
+A diretiva @include é criada para permitir que você use (inclua) o mixin.
+
+Definindo um Mixin
+Um mixin é definido com a diretiva @mixin.
+
+Sass Sintaxe @mixin:
+
+@mixin name {
+  property: value;
+  property: value;
+  ...
+}
+
+O exemplo a seguir cria um mixin chamado "important-text":
+
+Sintaxe SCSS:
+
+@mixin important-text {
+  color: red;
+  font-size: 25px;
+  font-weight: bold;
+  border: 1px solid blue;
+}
+
+Dica: Uma dica sobre hífens e sublinhados no Sass: 
+
+Hífens e sublinhados são considerados iguais. Isso significa que @mixin importante-texto { } e @mixin importante_texto { } são considerados como o mesmo mixin!
+
+
+Usando um Mixin
+
+A diretiva @include é usada para incluir um mixin.
+
+Sass Sintaxe @include mixin:
+
+selector {
+  @include mixin-name;
+}
+
+Então, para incluir o mixin de texto importante criado acima:
+
+Sintaxe SCSS:
+
+.danger {
+  @include important-text;
+  background-color: green;
+}

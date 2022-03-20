@@ -1,0 +1,31 @@
+Diretiva Sass @extend
+
+A diretiva @extend permite compartilhar um conjunto de propriedades CSS de um seletor para outro.
+
+A diretiva @extend é útil se você tiver elementos de estilo quase idênticos que diferem apenas em alguns pequenos detalhes.
+
+O exemplo Sass a seguir cria primeiro um estilo básico para botões (esse estilo será usado para a maioria dos botões). Em seguida, criamos um estilo para o botão "Relatório" e um estilo para o botão "Enviar". Ambos os botões "Report" e "Submit" herdam todas as propriedades CSS da classe .button-basic, através da @extenddiretiva. Além disso, eles têm suas próprias cores definidas:
+
+Sintaxe SCSS:
+
+.button-basic  {
+  border: none;
+  padding: 15px 30px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.button-report  {
+  @extend .button-basic;
+  background-color: red;
+}
+
+.button-submit  {
+  @extend .button-basic;
+  background-color: green;
+  color: white;
+}
+
+Usando a diretiva @extend, você não precisa especificar várias classes para um elemento em seu código HTML, como este: <button class="button-basic button-report">Report this</button>. Você só precisa especificar .button-report para obter os dois conjuntos de estilos.
+
