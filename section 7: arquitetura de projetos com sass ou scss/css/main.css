@@ -1,0 +1,66 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #ff07;
+}
+
+main {
+  text-align: center;
+}
+
+h1, h2 {
+  font-size: 2rem;
+  color: #f00;
+}
+
+p {
+  color: #00f;
+  font-size: 16px;
+}
+
+ul li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+#navbar {
+  padding: 10px;
+  border-bottom: 2px solid green;
+  margin-bottom: 10px;
+}
+#navbar ul {
+  display: flex;
+  justify-content: end;
+}
+#navbar ul li {
+  margin: 0 10px;
+}
+#navbar ul li a {
+  color: black;
+}
+#navbar ul li a:hover {
+  color: #f0f;
+}
+
+.btn {
+  padding: 10px;
+  background-color: #0f0;
+  border-radius: 4px;
+  border: 2px solid lightgreen;
+}
+.btn:hover {
+  background-color: #070;
+  color: white;
+}
+
+/*# sourceMappingURL=main.css.map */
