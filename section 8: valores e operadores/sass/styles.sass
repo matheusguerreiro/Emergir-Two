@@ -32,3 +32,17 @@ $font-weights: ('regular': 400, 'bold': 700, 'black': 900)
     
 h3
     font-weight: map.get($font-weights, 'black')
+
+@debug 10 > 2
+@debug 2 > 10
+
+@debug 100px != 10rem
+@debug 'Helvetica' == Helvetica
+
+@debug 100 > 100
+@debug 100 >= 100
+
+@if 10 % 2 == 0
+    @debug "Certo"
+@else 
+    @debug "Errado"
