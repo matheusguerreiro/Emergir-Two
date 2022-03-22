@@ -1,0 +1,43 @@
+#color-1 {
+  color: #9a717f;
+}
+
+.color-2 {
+  color: #5e434c;
+}
+
+.color-3 {
+  background-color: #a1bcb3;
+}
+
+.color-4 {
+  background-color: #800046;
+}
+
+.color-5 {
+  background-color: #602060;
+}
+
+.color-6 {
+  background-color: #ff80ff;
+}
+
+h1 {
+  border: 2px solid blue;
+}
+
+.c {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background-color: #8595ec;
+  border: 2px solid #533b71;
+  border-radius: 4px;
+}
+.c p {
+  color: #61a0c8;
+}
+
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,101 @@
+@use 'sass:color'
+@use 'sass:list'
+@use 'sass:map'
+@use 'sass:math'
+@use 'sass:meta'
+@use 'sass:string'
+
+@function colorR()
+    $color: rgb(255, 0, 0)
+
+    $n1: math.floor(math.random() * 255)
+    $n2: math.floor(math.random() * 255)
+    $n3: math.floor(math.random() * 255)
+
+    $color: rgb($n1, $n2, $n3)
+
+    @debug $color
+
+    @return $color
+
+$color-adjust: color.adjust(#68717f, $red: 50)
+
+#color-1
+    color: $color-adjust
+
+// quantidade verde na cor
+@debug color.green($color-adjust)
+
+$color-scale: color.scale($color-adjust, $lightness: -40%)
+
+.color-2
+    color: $color-scale
+
+.color-3
+    background-color: color.invert($color-scale)
+
+.color-4
+    background-color: color.mix(red, darkblue)
+
+.color-5
+    background-color: desaturate(color.mix(red, blue), 50%)
+
+.color-6
+    background-color: lighten(color.mix(red, blue), 50%)
+
+$list: 10px, 20px, 30px
+
+@debug $list
+
+$list: list.append($list, 25px)
+
+@debug $list
+
+@debug list.index($list, 20px)
+
+$list2: 15px, 35px
+
+$list3: list.join($list, $list2)
+
+@debug $list3
+
+@debug list.length($list3)
+
+$m: ('font': 13px, 'color': red)
+$n: ('border': 2px solid blue, 'transition': 1s)
+
+$mn: map.merge($m, $n)
+
+@debug $mn
+
+h1
+    border: map.get($mn, 'border')
+
+$pi: math.$pi
+@debug $pi
+
+$r10: math.floor(math.random() * 10)
+@debug $r10
+
+.c
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 50px
+    height: 50px
+    background-color: colorR()
+    border: 2px solid colorR()
+    border-radius: 4px
+
+    p
+        color: colorR()
+
+@debug meta.global-variable-exists('pi')
+
+@debug meta.inspect($list)
+
+@debug meta.type-of(colorR())
+
+$frase: "o gato do mato fugiu"
+
+@debug string.length($frase)
