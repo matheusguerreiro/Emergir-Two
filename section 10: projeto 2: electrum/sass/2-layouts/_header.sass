@@ -23,6 +23,7 @@
 					a
 							color: variables.$light-color
 
+	// headre-main
 	&-main
 		&-container
 			@include layouts-mixins.content-center
@@ -55,3 +56,28 @@
 
 				.wishlist-container, .header-cart-container
 					@include layouts-mixins.header-icon
+	
+	// header-bottom
+	&-bottom
+		background-color: variables.$light-color
+		border-top: 3px solid variables.$primary-color
+		border-bottom: 2px solid variables.$section-bg-color
+
+		nav
+
+			ul
+				@include layouts-mixins.content-center
+				justify-content: left
+				padding: 1rem 0
+
+				li
+					margin-right: 1.3rem
+
+					a
+						color: variables.$link-color
+						border-bottom: 2px solid transparent
+
+						&:hover
+							color: variables.$primary-color
+							border-bottom-color: variables.$primary-color
+
