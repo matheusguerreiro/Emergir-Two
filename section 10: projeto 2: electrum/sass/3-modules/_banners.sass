@@ -1,6 +1,6 @@
-@use "../1-base/variables"
-@use "../1-base/base-mixins"
-@use "modules-mixins"
+@use '../1-base/variables'
+@use '../1-base/base-mixins'
+@use 'modules-mixins'
 
 .banner
   width: 30%
@@ -11,6 +11,10 @@
   @include modules-mixins.center-bg
   background-size: 100%
 
+  @include base-mixins.mobile
+    width: 90%
+    margin: 1rem
+
   &:hover
     background-size: 120%
 
@@ -20,7 +24,7 @@
     height: 100%
     opacity: .8
     border-bottom-right-radius: 6rem
-  
+
   &-content
     position: absolute
     top: 0
@@ -39,9 +43,9 @@
       display: flex
       align-items: center
 
-      i
-        color: variables.$light-color
-        margin-left: .8rem
+    i
+      color: variables.$light-color
+      margin-left: .8rem
 
 #banner-1
   background-image: url('../img/banner-1.jpg')
@@ -51,4 +55,3 @@
 
 #banner-3
   background-image: url('../img/banner-3.jpg')
-  
