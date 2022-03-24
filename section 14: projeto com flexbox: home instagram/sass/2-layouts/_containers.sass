@@ -1,0 +1,69 @@
+@use "../1-base/variables"
+@use "../1-base/mixins-base"
+@use "mixins-container"
+
+#main-container
+  display: flex
+  flex-direction: row
+  margin-top: 30px
+
+  @include mixins-base.mobile
+    margin-top: 0
+
+#banner-container, #form-container
+  @include mixins-container.containers
+
+#banner-container
+  text-align: right
+
+  @include mixins-base.mobile
+    display: none
+
+  img
+    margin-right: -15px
+
+#form-container
+  text-align: center
+
+  @include mixins-base.mobile
+    width: 100%
+    border: none
+
+#register-container
+  background-color: variables.$bgc1
+  border: 1px solid variables.$bc0
+  width: 350px
+  margin-top: 10px
+  padding: 25px
+
+  @include mixins-base.mobile
+    width: 100%
+    border: none
+
+  p
+    font-size: 14px
+    color: variables.$c3
+
+  a
+    color: variables.$c4
+    font-weight: bold
+    text-decoration: none
+
+#get-app-container
+  text-align: center
+  width: 350px
+
+  @include mixins-base.mobile
+    width: 100%
+    border: none
+
+  p
+    margin: 20px 0
+    font-size: 13px
+
+  a
+    text-decoration: none
+
+  img
+    width: 136px
+    height: 40px

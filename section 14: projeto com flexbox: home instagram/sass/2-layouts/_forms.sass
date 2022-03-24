@@ -1,0 +1,44 @@
+@use "../1-base/variables"
+@use "../1-base/mixins-base"
+
+#form-box
+  background-color: variables.$bgc1
+  border: 1px solid variables.$bc0
+  width: 350px
+  margin-top: 30px
+
+  @include mixins-base.mobile
+    margin-top: 0
+    width: 100%
+    border: 0
+
+  #logo-insta
+    width: 175px
+    height: 51px
+    margin: 30px auto 12px
+    background: variables.$bgc1
+
+#login-form
+  margin-top: 20px
+
+  input
+    display: block
+    font-size: 12px
+    padding: 12px 9px
+    background-color: variables.$bgc0
+    border: 1px solid variables.$bc0
+    border-radius: 3px
+    width: 268px
+    margin: 5px auto
+
+    &[type="submit"]
+      background-color: variables.$bgc2
+      color: variables.$bgc1
+      margin-top: 15px
+      border-radius: 5px
+      height: 30px
+      border-color: variables.$bgc2
+      font-size: 13px
+      padding: 0
+      font-weight: bold
+      cursor: pointer
