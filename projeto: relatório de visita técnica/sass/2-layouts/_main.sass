@@ -1,0 +1,181 @@
+@use "../1-base/variables"
+@use "mixins-layouts"
+
+main
+  background-color: variables.$bg-g
+  padding: 40px 143px 382px
+
+
+.main-content
+  display: flex
+  
+  .separador
+    border: 1px solid variables.$border-separador
+    margin: 16px 0
+
+  .left
+    #fazenda
+      background-color: variables.$bg-white
+      width: 248px
+      // height: 474px
+      border-radius: 8px
+      display: flex
+      flex-direction: column
+      border: 1px solid variables.$border-separador
+      margin-top: 27.5px
+      margin-right: 24px
+
+      .label
+        font-weight: bold
+        font-size: 12px
+        line-height: 12px
+        color: variables.$color-l
+
+      .content
+        font-size: 16px
+        line-height: 24px
+        color: variables.$color-p
+
+      .info
+        font-size: 14px
+        line-height: 18.2px
+        color: variables.$color-i-h1
+
+      .fazenda
+        margin: 16px 16px 0
+        .content
+          text-transform: uppercase
+
+      .ddv-s
+        display: flex
+
+        .data-da-visita, .safra
+          margin: 0 16px 16px
+
+      .realizada-por
+        display: flex
+        margin-bottom: 16px
+        
+        .r-p
+          margin: 0 16px
+
+        .avatar
+          background-color: variables.$bg-g
+          width: 32px
+          height: 32px
+          border-radius: 50%
+          border: 1px solid variables.$bg-main
+          display: flex
+          justify-content: center
+          align-items: center
+
+      .pluviometria
+        margin: 0 16px
+
+        .rain-info
+
+          .p1212
+            font-size: 12px
+            line-height: 12px
+            color: #627389
+            margin-top: 5px
+          
+          .p118
+            font-size: 16px
+            line-height: 16px
+            font-weight: bold
+            color: variables.$color-l
+
+            i
+              color: #1854C4
+              margin-right: 2px
+
+      .observacoes
+        margin: 0 16px
+
+        .info
+          color: #415164
+
+      .botao-imprimir
+        display: flex
+        margin: 0 16px 16px
+        justify-content: center
+        align-items: center
+        background-color: variables.$bg-white
+        width: 216px
+        height: 32px
+        border: 1px solid #C8CED8
+        border-radius: 4px
+        
+        p
+          padding: 10px 16px
+          font-weight: bold
+          text-transform: uppercase
+          color: #556476
+          font-size: 12px
+          line-height: 12px
+          letter-spacing: 2%
+
+          i
+            margin-right: 8px
+            font-size: 16px
+            line-height: 12px
+            color: #415164
+          
+  .right
+
+    h2
+      font-size: 20px
+      line-height: 20px
+      letter-spacing: -2%
+      color: variables.$color-hs
+      margin-bottom: 8px
+    
+    &-row
+      // background-color: yellow
+      display: flex
+      flex-wrap: wrap
+
+      h2
+        width: 100%
+        // margin-top: 16px
+
+      h3
+      color: #363E48
+      font-size: 16px
+      line-height: 16px
+
+      i
+        color: #798AA4
+        font-size: 14px
+        line-height: 14px
+
+      .info
+        font-size: 14px
+        line-height: 18.2px
+        color: #415164
+
+      img
+        width: 100px
+        height: 100px
+        border-radius: 4px
+
+      #note-card-1
+        @include mixins-layouts.card
+
+      #note-card-2
+        @include mixins-layouts.card
+
+      #note-card-3
+        @include mixins-layouts.card
+
+      #note-card-4
+        @include mixins-layouts.card
+
+        .info
+          margin-top: 8px
+
+      #plantation-card-1, #plantation-card-2
+        @include mixins-layouts.plantation-card
+
+      

@@ -1,0 +1,113 @@
+@use "../1-base/variables"
+
+@mixin card
+  background-color: variables.$bg-white
+  width: 380px
+  height: fit-content
+  border: 1px solid variables.$bg-main
+  border-radius: 8px
+  margin: 0 16px 16px 0
+
+  h3
+    margin: 16px 0 0 16px
+
+  .imagens
+    margin: 8px 16px 6px
+
+    img
+      margin-right: 12px
+  
+  .info
+    margin: 0 0 16px 16px
+
+@mixin plantation-card
+  width: 776px
+  background-color: variables.$bg-white
+  border: 1px solid variables.$bg-main
+  border-radius: 8px
+  display: flex
+  justify-content: start
+  margin-bottom: 16px
+
+  i
+    font-weight: 900
+    font-size: 18px
+    line-height: 18px
+    color: variables.$color-i-h1
+    margin: 35px 20px 35px 24px
+
+  .plot-info
+    margin: 16px
+    width: 168px
+    height: fit-content
+    display: flex
+    flex-wrap: wrap
+
+    .plot-name
+      font-size: 16px
+      line-height: 16px
+      font-weight: bold
+      margin-right: 12px
+    
+    .cicle
+      font-size: 12px
+      line-height: 12px
+      color: variables.$color-i-h1
+      border: 1px solid variables.$border-separador
+      border-radius: 4px
+      font-family: 'Roboto', sans-serif
+      display: flex
+      align-items: center
+      justify-content: center
+      height: fit-content
+      width: fit-content
+      padding: 2px 4px
+
+    .variety
+      font-size: 12px
+      line-height: 12px
+      color: variables.$color-variety
+      margin: 4px 0
+
+    .status
+      font-family: 'Roboto', sans-serif
+      font-size: 12px
+      line-height: 10px
+      font-weight: bold
+      color: variables.$color-status
+      border: 1px solid variables.$border-status
+      border-radius: 32px
+      padding: 2px 8px
+      display: flex
+      align-items: center
+
+  .plot-dates
+    // background-color: orange
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin: 0 16px
+    width: 200px
+
+    .c1
+      flex-direction: column
+
+      .name
+        margin: 4px 0
+        font-size: 12px
+        line-height: 12px
+        color: variables.$color-l
+
+    .c2
+      .date
+        margin: 4px 0
+        font-size: 12px
+        line-height: 12px
+        color: variables.$color-i-h1
+
+  .div-1, .div-3
+    border: 1px solid variables.$border-separador
+
+  .div-1
+    margin-left: 35.5%
+  
