@@ -19,6 +19,8 @@ li {
   display: flex;
   justify-content: space-between;
   padding: 0px 32px;
+  box-shadow: 0px 2px 1px rgba(65, 81, 100, 0.15);
+  margin-bottom: 2px;
 }
 #header .header-title {
   width: 330px;
@@ -27,6 +29,11 @@ li {
   display: flex;
   flex-direction: row;
   margin: 20px 0px;
+}
+@media (max-width: 425px) {
+  #header .header-title {
+    align-items: center;
+  }
 }
 #header .header-title i {
   font-size: 22px;
@@ -37,6 +44,13 @@ li {
   font-size: 24px;
   line-height: 24px;
   color: #363e48;
+}
+@media (max-width: 425px) {
+  #header .header-title h1 {
+    width: 150px;
+    font-size: 16px;
+    line-height: 16px;
+  }
 }
 #header .header-logos {
   background-color: #fff;
@@ -49,9 +63,24 @@ main {
   background-color: #f5f6fa;
   padding: 40px 143px 382px;
 }
+@media (max-width: 768px) {
+  main {
+    padding: 42px 32px 40px;
+  }
+}
+@media (max-width: 425px) {
+  main {
+    padding: 0;
+  }
+}
 
 .main-content {
   display: flex;
+}
+@media (max-width: 425px) {
+  .main-content {
+    flex-direction: column;
+  }
 }
 .main-content .separador {
   border: 1px solid #e7e8ef;
@@ -66,6 +95,12 @@ main {
   border: 1px solid #e7e8ef;
   margin-top: 27.5px;
   margin-right: 24px;
+}
+@media (max-width: 425px) {
+  .main-content .left #fazenda {
+    width: 393px;
+    margin: 40px 16px 16px;
+  }
 }
 .main-content .left #fazenda .label {
   font-weight: bold;
@@ -99,6 +134,11 @@ main {
   display: flex;
   margin-bottom: 16px;
 }
+@media (max-width: 425px) {
+  .main-content .left #fazenda .realizada-por {
+    margin-bottom: 0;
+  }
+}
 .main-content .left #fazenda .realizada-por .r-p {
   margin: 0 16px;
 }
@@ -112,24 +152,39 @@ main {
   justify-content: center;
   align-items: center;
 }
-.main-content .left #fazenda .pluviometria {
+.main-content .left #fazenda .pluviometria, .main-content .left #fazenda .pluviometria-s {
   margin: 0 16px;
 }
-.main-content .left #fazenda .pluviometria .rain-info .p1212 {
+@media (max-width: 425px) {
+  .main-content .left #fazenda .pluviometria, .main-content .left #fazenda .pluviometria-s {
+    margin-left: 28px;
+  }
+}
+.main-content .left #fazenda .pluviometria .rain-info .p1212, .main-content .left #fazenda .pluviometria-s .rain-info .p1212 {
   font-size: 12px;
   line-height: 12px;
   color: #627389;
   margin-top: 5px;
 }
-.main-content .left #fazenda .pluviometria .rain-info .p118 {
+.main-content .left #fazenda .pluviometria .rain-info .p118, .main-content .left #fazenda .pluviometria-s .rain-info .p118 {
   font-size: 16px;
   line-height: 16px;
   font-weight: bold;
   color: #20252b;
 }
-.main-content .left #fazenda .pluviometria .rain-info .p118 i {
+.main-content .left #fazenda .pluviometria .rain-info .p118 i, .main-content .left #fazenda .pluviometria-s .rain-info .p118 i {
   color: #1854C4;
   margin-right: 2px;
+}
+@media (max-width: 425px) {
+  .main-content .left #fazenda .pluviometria {
+    display: none;
+  }
+}
+@media (min-width: 426px) {
+  .main-content .left #fazenda .pluviometria-s {
+    display: none;
+  }
 }
 .main-content .left #fazenda .observacoes {
   margin: 0 16px;
@@ -148,6 +203,11 @@ main {
   border: 1px solid #C8CED8;
   border-radius: 4px;
 }
+@media (max-width: 425px) {
+  .main-content .left #fazenda .botao-imprimir {
+    width: auto;
+  }
+}
 .main-content .left #fazenda .botao-imprimir p {
   padding: 10px 16px;
   font-weight: bold;
@@ -162,6 +222,9 @@ main {
   font-size: 16px;
   line-height: 12px;
   color: #415164;
+}
+.main-content .right {
+  margin-left: 16px;
 }
 .main-content .right h2 {
   font-size: 20px;
@@ -203,6 +266,16 @@ main {
   border-radius: 8px;
   margin: 0 16px 16px 0;
 }
+@media (max-width: 768px) {
+  .main-content .right-row #note-card-1 {
+    width: 432px;
+  }
+}
+@media (max-width: 425px) {
+  .main-content .right-row #note-card-1 {
+    width: 390px;
+  }
+}
 .main-content .right-row #note-card-1 h3 {
   margin: 16px 0 0 16px;
 }
@@ -213,7 +286,7 @@ main {
   margin-right: 12px;
 }
 .main-content .right-row #note-card-1 .info {
-  margin: 0 0 16px 16px;
+  margin: 0 16px 16px 16px;
 }
 .main-content .right-row #note-card-2 {
   background-color: #fff;
@@ -222,6 +295,16 @@ main {
   border: 1px solid #dfe0e7;
   border-radius: 8px;
   margin: 0 16px 16px 0;
+}
+@media (max-width: 768px) {
+  .main-content .right-row #note-card-2 {
+    width: 432px;
+  }
+}
+@media (max-width: 425px) {
+  .main-content .right-row #note-card-2 {
+    width: 390px;
+  }
 }
 .main-content .right-row #note-card-2 h3 {
   margin: 16px 0 0 16px;
@@ -233,7 +316,7 @@ main {
   margin-right: 12px;
 }
 .main-content .right-row #note-card-2 .info {
-  margin: 0 0 16px 16px;
+  margin: 0 16px 16px 16px;
 }
 .main-content .right-row #note-card-3 {
   background-color: #fff;
@@ -242,6 +325,16 @@ main {
   border: 1px solid #dfe0e7;
   border-radius: 8px;
   margin: 0 16px 16px 0;
+}
+@media (max-width: 768px) {
+  .main-content .right-row #note-card-3 {
+    width: 432px;
+  }
+}
+@media (max-width: 425px) {
+  .main-content .right-row #note-card-3 {
+    width: 390px;
+  }
 }
 .main-content .right-row #note-card-3 h3 {
   margin: 16px 0 0 16px;
@@ -253,7 +346,7 @@ main {
   margin-right: 12px;
 }
 .main-content .right-row #note-card-3 .info {
-  margin: 0 0 16px 16px;
+  margin: 0 16px 16px 16px;
 }
 .main-content .right-row #note-card-4 {
   background-color: #fff;
@@ -262,6 +355,16 @@ main {
   border: 1px solid #dfe0e7;
   border-radius: 8px;
   margin: 0 16px 16px 0;
+}
+@media (max-width: 768px) {
+  .main-content .right-row #note-card-4 {
+    width: 432px;
+  }
+}
+@media (max-width: 425px) {
+  .main-content .right-row #note-card-4 {
+    width: 390px;
+  }
 }
 .main-content .right-row #note-card-4 h3 {
   margin: 16px 0 0 16px;
@@ -273,7 +376,7 @@ main {
   margin-right: 12px;
 }
 .main-content .right-row #note-card-4 .info {
-  margin: 0 0 16px 16px;
+  margin: 0 16px 16px 16px;
 }
 .main-content .right-row #note-card-4 .info {
   margin-top: 8px;
@@ -287,12 +390,36 @@ main {
   justify-content: start;
   margin-bottom: 16px;
 }
+@media (max-width: 768px) {
+  .main-content .right-row #plantation-card-1, .main-content .right-row #plantation-card-2 {
+    width: 432px;
+  }
+  .main-content .right-row #plantation-card-1 .div-1, .main-content .right-row #plantation-card-2 .div-1 {
+    display: none;
+  }
+  .main-content .right-row #plantation-card-1 .div-3, .main-content .right-row #plantation-card-2 .div-3 {
+    margin-left: 40%;
+  }
+}
+@media (max-width: 425px) {
+  .main-content .right-row #plantation-card-1, .main-content .right-row #plantation-card-2 {
+    width: 390px;
+  }
+  .main-content .right-row #plantation-card-1 .div-3, .main-content .right-row #plantation-card-2 .div-3 {
+    margin-left: 34%;
+  }
+}
 .main-content .right-row #plantation-card-1 i, .main-content .right-row #plantation-card-2 i {
   font-weight: 900;
   font-size: 18px;
   line-height: 18px;
   color: #798AA4;
   margin: 35px 20px 35px 24px;
+}
+@media (max-width: 768px) {
+  .main-content .right-row #plantation-card-1 i, .main-content .right-row #plantation-card-2 i {
+    margin: 35px 20px;
+  }
 }
 .main-content .right-row #plantation-card-1 .plot-info, .main-content .right-row #plantation-card-2 .plot-info {
   margin: 16px;
@@ -345,6 +472,11 @@ main {
   align-items: center;
   margin: 0 16px;
   width: 200px;
+}
+@media (max-width: 768px) {
+  .main-content .right-row #plantation-card-1 .plot-dates, .main-content .right-row #plantation-card-2 .plot-dates {
+    display: none;
+  }
 }
 .main-content .right-row #plantation-card-1 .plot-dates .c1, .main-content .right-row #plantation-card-2 .plot-dates .c1 {
   flex-direction: column;

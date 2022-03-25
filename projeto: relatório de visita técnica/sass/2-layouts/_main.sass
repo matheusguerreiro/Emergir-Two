@@ -1,19 +1,30 @@
 @use "../1-base/variables"
+@use "../1-base/responsive"
 @use "mixins-layouts"
 
 main
   background-color: variables.$bg-g
   padding: 40px 143px 382px
 
+  @include responsive.tablet
+    padding: 42px 32px 40px
+
+  @include responsive.mobile
+    padding: 0
+
 
 .main-content
   display: flex
+
+  @include responsive.mobile
+    flex-direction: column
   
   .separador
     border: 1px solid variables.$border-separador
     margin: 16px 0
 
   .left
+
     #fazenda
       background-color: variables.$bg-white
       width: 248px
@@ -24,6 +35,10 @@ main
       border: 1px solid variables.$border-separador
       margin-top: 27.5px
       margin-right: 24px
+
+      @include responsive.mobile
+        width: 393px
+        margin: 40px 16px 16px
 
       .label
         font-weight: bold
@@ -55,6 +70,9 @@ main
       .realizada-por
         display: flex
         margin-bottom: 16px
+
+        @include responsive.mobile
+          margin-bottom: 0
         
         .r-p
           margin: 0 16px
@@ -69,8 +87,11 @@ main
           justify-content: center
           align-items: center
 
-      .pluviometria
+      .pluviometria, .pluviometria-s
         margin: 0 16px
+
+        @include responsive.mobile
+          margin-left: 28px
 
         .rain-info
 
@@ -89,6 +110,14 @@ main
             i
               color: #1854C4
               margin-right: 2px
+      
+      .pluviometria
+        @include responsive.mobile
+          display: none
+
+      .pluviometria-s
+        @include responsive.p
+          display: none
 
       .observacoes
         margin: 0 16px
@@ -106,6 +135,9 @@ main
         height: 32px
         border: 1px solid #C8CED8
         border-radius: 4px
+
+        @include responsive.mobile
+          width: auto
         
         p
           padding: 10px 16px
@@ -123,6 +155,8 @@ main
             color: #415164
           
   .right
+    // padding: 0 0 0 16px
+    margin-left: 16px
 
     h2
       font-size: 20px
