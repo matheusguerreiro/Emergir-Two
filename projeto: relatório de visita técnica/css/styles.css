@@ -225,6 +225,9 @@ main {
 }
 .main-content .right {
   margin-left: 16px;
+  width: 776px;
+  display: flex;
+  flex-wrap: wrap;
 }
 .main-content .right h2 {
   font-size: 20px;
@@ -382,7 +385,7 @@ main {
   margin-top: 8px;
 }
 .main-content .right-row #plantation-card-1, .main-content .right-row #plantation-card-2 {
-  width: 776px;
+  width: 100%;
   background-color: #fff;
   border: 1px solid #dfe0e7;
   border-radius: 8px;
